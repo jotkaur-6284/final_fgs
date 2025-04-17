@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Raggi - Gurudwara Shri Fatehgarh Sahib</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .form-column {
+      flex: 1;
+      min-width: 280px;
+    }
+    .form-bottom {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="file"] {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .tab{
+        width: 50% !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Add Raggi Information</h2>
+    <form action="/submit-raggi" method="POST" enctype="multipart/form-data">
+      <div class="form-row">
+        <!-- Singer 1 -->
+        <div class="form-column">
+          <div class="form-group">
+            <label for="singer1">Raggi (Shabad Singer) 1 Name:</label>
+            <input type="text" id="singer1" name="singer1" required>
+          </div>
+          <div class="form-group">
+            <label for="singer1_address">Address:</label>
+            <input type="text" id="singer1_address" name="singer1_address" required>
+          </div>
+          <div class="form-group">
+            <label for="singer1_phone">Phone Number:</label>
+            <input type="tel" id="singer1_phone" name="singer1_phone" required>
+          </div>
+          <div class="form-group">
+            <label for="singer1_photo">Photo:</label>
+            <input type="file" id="singer1_photo" name="singer1_photo" accept="image/*" required>
+          </div>
+          <div class="form-group">
+            <label for="singer1_time">Kirtan Duty Time:</label>
+            <input type="time" id="singer1_time" name="singer1_time" required>
+          </div>
+        </div>
+
+        <!-- Singer 2 -->
+        <div class="form-column">
+          <div class="form-group">
+            <label for="singer2">Raggi (Shabad Singer) 2 Name:</label>
+            <input type="text" id="singer2" name="singer2" required>
+          </div>
+          <div class="form-group">
+            <label for="singer2_address">Address:</label>
+            <input type="text" id="singer2_address" name="singer2_address" required>
+          </div>
+          <div class="form-group">
+            <label for="singer2_phone">Phone Number:</label>
+            <input type="tel" id="singer2_phone" name="singer2_phone" required>
+          </div>
+          <div class="form-group">
+            <label for="singer2_photo">Photo:</label>
+            <input type="file" id="singer2_photo" name="singer2_photo" accept="image/*" required>
+          </div>
+          <div class="form-group">
+            <label for="singer2_time">Kirtan Duty Time:</label>
+            <input type="time" id="singer2_time" name="singer2_time" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabla Player -->
+      <div class="form-bottom">
+        <div class="form-group">
+          <label for="tabla">Tabla Player Name:</label>
+          <input type="text" id="tabla" name="tabla" class="tab" required>
+        </div>
+        <div class="form-group">
+          <label for="tabla_address">Address:</label>
+          <input type="text" id="tabla_address" name="tabla_address" class="tab" required>
+        </div>
+        <div class="form-group">
+          <label for="tabla_phone">Phone Number:</label>
+          <input type="tel" id="tabla_phone" name="tabla_phone" class="tab" required>
+        </div>
+        <div class="form-group">
+          <label for="tabla_photo">Photo:</label>
+          <input type="file" id="tabla_photo" name="tabla_photo" class="tab" accept="image/*" required>
+        </div>
+        <div class="form-group">
+          <label for="tabla_time">Kirtan Duty Time:</label>
+          <input type="time" id="tabla_time" name="tabla_time" class="tab" required>
+        </div>
+      </div>
+
+      <center><button type="submit" class="tab">Add Raggi</button></center>
+    </form>
+  </div>
+</body>
+</html>
